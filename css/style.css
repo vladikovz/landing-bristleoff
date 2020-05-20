@@ -69,6 +69,42 @@ a {
     padding: 0 15px;
 }
 
+.header-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 550px;
+}
+
+.header-description {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 45px;
+}
+
+.btn {
+    padding: 20px 30px;
+    background-color: rgba(255, 164, 28, 0.62);
+    margin: 70px auto;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn a {
+    font-size: 20px;
+    color: #0b0b0b;
+}
+
+.btn:hover {
+    background-color: rgba(69, 255, 28, 0.41);
+}
+
 .menu {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
@@ -120,8 +156,8 @@ a {
 
 .phone-logo img {
     width: 20px;
+    margin-right: 10px;
 }
-
 
 .number {
     font-size: 16px;

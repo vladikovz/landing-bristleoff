@@ -15,9 +15,14 @@
 </head>
 <body>
 
-<!-- Header -->
+<!-- Header-->
 <header class="header">
-
+    <div class="header-wrapper">
+        <div class="header-box">
+            <h1 class="header-description">Мы специализируемся на <span class="typed-words"></span></h1>
+            <div class="btn btn-header"><a>Записаться</a></div>
+        </div>
+    </div>
 </header>
 
 <section class="slider">
@@ -26,7 +31,7 @@
     <div class="slider__item" style="background-image: url(images/bg-3.jpg);"></div>
 </section>
 
-<!-- Navigation -->
+<!-- Navigation-->
 <nav class="menu">
     <div class="container">
         <div class="header_inner">
@@ -61,8 +66,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--<script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>-->
 <!--<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>-->
-<script src="js/main.js" type="text/javascript"></script>
+<script src="js/typed.js"></script>
 <script src="js/slick/slick.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+
+<script>
+    let typed = new Typed('.typed-words', {
+        strings: ["стрижках", " укладках", " моделировании бороды"],
+        typeSpeed: 70,
+        backSpeed: 40,
+        backDelay: 1000,
+        startDelay: 700,
+        loop: true,
+        showCursor: true
+    });
+</script>
 
 </body>
 </html>
