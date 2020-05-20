@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0b0b;
+    color: #fff;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    padding: 0 15px;
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+/* header */
+.header {
+    height: 100vh;
+    position: absolute;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.3);
+    left: 0;
+    right: 0;
+}
+
+.slider__item {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slider {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+
+.slider .slick-dots button {
+    width: 15px;
+    height: 15px;
+    border-radius: 30%;
+    background-color: #0b0b0b;
+    border: none;
+    padding: 0;
+    font-size: 0;
+}
+
+.slider .slick-dots .slick-active button {
+    background-color: #ffffff;
+}
+
+.slider .slick-dots {
+    margin: -70px auto 0;
+    position: relative;
+    z-index: 6;
+    text-align: left;
+    max-width: 1230px;
+    padding: 0 15px;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 550px;
+}
+
+.header-description {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 45px;
+}
+
+.btn {
+    padding: 20px 30px;
+    background-color: rgba(255, 164, 28, 0.62);
+    margin: 70px auto;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn a {
+    font-size: 20px;
+    color: #0b0b0b;
+}
+
+.btn:hover {
+    background-color: rgba(69, 255, 28, 0.41);
+}
+
+.menu {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 70px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    line-height: 70px;
+    transition: all .6s;
+}
+
+.bg-menu-scroll {
+    background-color: rgba(96, 48, 3, 0.4);
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.logo_box {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 20px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.header-title {
+    font-weight: 400;
+}
+
+.contact_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 35px;
+}
+
+.phone {
+    display: flex;
+}
+
+.phone-logo img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.number {
+    font-size: 16px;
+}
+
+.timetable {
+    font-size: 14px;
+}
+
+.menu_list {
+    display: flex;
+}
+
+.menu_list ul {
+    display: flex;
+}
+
+.menu_list a {
+    margin-right: 20px;
+    font-size: 18px;
+    display: inline-block;
+    transition: all .3s;
+}
+
+.menu_list a:hover {
+    color: rgba(255, 219, 182, 0.79);
+    transform: scale(1.2);
+}
+
+.section {
+    background-color: #0b0b0b;
+    height: 100vh;
+}
