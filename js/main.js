@@ -3,7 +3,7 @@ $(function(){
         arrows: false,
         fade: true,
         autoplay: 3000,
-        dots: true,
+        dots: false,
     })
     $(window).on('scroll', function () {
         if($(window).scrollTop()){
