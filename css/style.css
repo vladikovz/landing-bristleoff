@@ -43,31 +43,34 @@ a {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-
 }
 
-.slider .slick-dots button {
-    width: 15px;
-    height: 15px;
-    border-radius: 30%;
-    background-color: #0b0b0b;
-    border: none;
-    padding: 0;
-    font-size: 0;
-}
+/*.slider .slick-dots button {*/
+/*    width: 15px;*/
+/*    height: 15px;*/
+/*    border-radius: 30%;*/
+/*    background-color: #0b0b0b;*/
+/*    border: none;*/
+/*    padding: 0;*/
+/*    font-size: 0;*/
+/*}*/
 
-.slider .slick-dots .slick-active button {
-    background-color: #ffffff;
-}
+/*.slider .slick-dots .slick-active button {*/
+/*    background-color: #ffffff;*/
+/*}*/
 
-.slider .slick-dots {
-    margin: -70px auto 0;
-    position: relative;
-    z-index: 6;
-    text-align: left;
-    max-width: 1230px;
-    padding: 0 15px;
-}
+/*.slider .slick-dots {*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    margin: -100px auto 0;*/
+/*    position: relative;*/
+/*    z-index: 6;*/
+/*    align-items: flex-end;*/
+/*    max-width: 1230px;*/
+/*    padding: 0 15px;*/
+/*}*/
 
 .header-wrapper {
     display: flex;
@@ -88,15 +91,20 @@ a {
     line-height: 45px;
 }
 
+.btn-header {
+    margin: 70px auto;
+}
+
 .btn {
     padding: 20px 30px;
     background-color: rgba(255, 164, 28, 0.62);
-    margin: 70px auto;
     cursor: pointer;
     transition: all .3s;
 }
 
 .btn a {
+    width: 70px;
+    height: 40px;
     font-size: 20px;
     color: #0b0b0b;
 }
@@ -190,6 +198,7 @@ a {
 .features {
     display: flex;
     background-image: url(../images/background_1.jpg);
+    background-position: bottom;
     background-color: #0b0b0b;
     height: 80vh;
     background-repeat: no-repeat;
@@ -200,12 +209,30 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 100px 20px;
+    position: relative;
+    padding: 10px 20px 170px 20px;
+    z-index: 7;
+    background-color: rgba(17, 16, 16, 0.56);
+    border-radius: 10px;
+    height: 70vh;
+
 }
 
 .feature-background {
-    background-color: rgba(17, 16, 16, 0.56);
-    height: 100vh;
+    display: flex;
+    z-index: 7;
+    position: relative;
+    margin-top: -130px;
+    height: 70vh;
+    border-radius: 10px;
+    background-image: url(../images/background_22.jpg);
+    background-position: top;
+    background-color: #0b0b0b;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:-1px 8px 26px 6px rgba(255, 255, 255, 0.54);
+    -webkit-box-shadow:-1px 8px 26px 6px rgba(255, 255, 255, 0.54);
+    -moz-box-shadow:-1px 8px 26px 6px rgba(255, 255, 255, 0.54);
 }
 
 .features-header {
@@ -215,20 +242,60 @@ a {
     align-items: center;
 }
 
+.arrow {
+    margin: 5px 0;
+}
+
+.arrow span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform:rotate(45deg);
+    margin: -10px;
+    animation: animate 1.5s infinite;
+}
+
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0%
+    {
+        opacity: 0;
+        transform:rotate(45deg) translate(-20px, -20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform:rotate(45deg) translate(20px, 20px);
+    }
+}
+
 .features-header__icon {
     margin-bottom: 20px;
     color: #FAC917;
 }
 
 .features-header__title {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
     /*color: #0b0b0b;*/
+    /*margin-top: 10px;*/
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
 .features-header__description {
+    margin-top: 40px;
     font-size: 18px;
     font-weight: 300;
 }
@@ -270,4 +337,123 @@ a {
     font-size: 16px;
     text-align: center;
     font-weight: 300;
+}
+
+.price {
+    display: flex;
+    background-color: #0b0b0b;
+    height: 60vh;
+}
+
+.price-background {
+    margin-top: -140px ;
+    background-color: rgb(201, 191, 191);
+    height: 75vh;
+}
+
+.price-title {
+    text-shadow: 1px 1px 2px black, 0 0 1em rgba(255, 115, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    padding: 50px 30px 20px 30px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.item-title__separator {
+    border-top: 1px solid #939393;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.item-separator {
+    border-top: 2px dashed #000000;
+}
+
+.price-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price-items {
+    max-width: 500px;
+    margin: 50px;
+}
+
+.price-item:hover .price-item__name{
+    text-shadow: 2px 0px 6px rgb(138, 135, 135);
+}
+
+.price-item-inner {
+    margin: 5px 0 10px 0;
+}
+
+.price-item__info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.price-item__name {
+    color: #0b0b0b;
+    margin-bottom: 15px;
+    width: 260px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+}
+
+.price-item__des {
+    color: #717171;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.price-item__cost {
+    color: #C39258;
+    display: flex;
+    justify-content: flex-end;
+    width: 100px;
+    margin-left: 120px;
+}
+
+.price-bottom-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.price-img {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    box-shadow:-1px 8px 26px 2px rgba(0,0,0,0.5);
+    -webkit-box-shadow:-1px 8px 26px 2px rgba(0,0,0,0.5);
+    -moz-box-shadow:-1px 8px 26px 2px rgba(0,0,0,0.5);
+}
+
+.price-img img{
+    width: 350px;
+    height: 350px;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+}
+
+.price-img img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.btn-price {
+    margin: auto 0;
+}
+
+.portfolio {
+    margin-top: -140px;
+    background-color: #C39258;
+    height: 100vh;
 }
