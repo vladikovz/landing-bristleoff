@@ -200,7 +200,7 @@ a {
     background-image: url(../images/background_1.jpg);
     background-position: bottom;
     background-color: #0b0b0b;
-    height: 80vh;
+    height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -214,7 +214,8 @@ a {
     z-index: 7;
     background-color: rgba(17, 16, 16, 0.56);
     border-radius: 10px;
-    height: 70vh;
+    height: 700px;
+    margin-bottom: 50px;
 
 }
 
@@ -223,7 +224,8 @@ a {
     z-index: 7;
     position: relative;
     margin-top: -130px;
-    height: 70vh;
+    /*margin-bottom: 50px;*/
+    height: 700px;
     border-radius: 10px;
     background-image: url(../images/background_22.jpg);
     background-position: top;
@@ -342,13 +344,13 @@ a {
 .price {
     display: flex;
     background-color: #0b0b0b;
-    height: 60vh;
+    /*height:600px;*/
 }
 
 .price-background {
     margin-top: -140px ;
     background-color: rgb(201, 191, 191);
-    height: 75vh;
+    height: 700px;
 }
 
 .price-title {
@@ -426,8 +428,8 @@ a {
 }
 
 .price-img {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     box-shadow:-1px 8px 26px 2px rgba(0,0,0,0.5);
     -webkit-box-shadow:-1px 8px 26px 2px rgba(0,0,0,0.5);
@@ -435,8 +437,8 @@ a {
 }
 
 .price-img img{
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     -moz-transition: all .4s ease-out;
     -o-transition: all .4s ease-out;
     -webkit-transition: all .4s ease-out;
@@ -454,6 +456,16 @@ a {
 
 .portfolio {
     margin-top: -140px;
+    background-image: url(../images/background_2.jpg);
     background-color: #C39258;
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portfolio-title {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding-top: 350px;
 }
