@@ -9,7 +9,18 @@ body {
     line-height: 28px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+
+    -webkit-animation: fade-in 1s linear; /* Safari 4+ */
+    -moz-animation: fade-in 1s linear; /* Fx 5+ */
+    -o-animation: fade-in 1s linear; /* Opera 12+ */
+    animation: fade-in 1s linear; /* IE 10+, Fx 29+ */
 }
+
+/* smooth page loading */
+@-webkit-keyframes fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@-moz-keyframes    fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@-o-keyframes      fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+@keyframes         fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
 
 a {
     color: #fff;
@@ -490,14 +501,30 @@ a {
 }
 
 .gallery-img {
-    width: 400px;
     height: 266px;
     overflow: hidden;
     box-shadow: -1px 8px 26px 2px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: -1px 8px 26px 2px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: -1px 8px 26px 2px rgba(0, 0, 0, 0.5);
+    margin: 6px;
+    width: calc(33% - 12px);
+
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 1s;
 }
 
+@keyframes example {
+    0% {opacity: 0;}
+    100% {opacity:1;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0% {opacity: 0;}
+    100% {opacity:1;}
+}
 
 .gallery-img img {
     width: 400px;
@@ -511,13 +538,6 @@ a {
     -moz-transform: scale(1.2);
     -o-transform: scale(1.2);
 }
-
-.gallery-img {
-    margin: 6px;
-    width: calc(33% - 12px);
-
-}
-
 
 .portfolio-gallery__beard {
     margin: 6px -6px -6px -6px;

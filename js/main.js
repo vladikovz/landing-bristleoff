@@ -34,4 +34,5 @@ $(function(){
             $('.portfolio-gallery__beard').removeClass("portfolio-gallery__hidden");
             $('.portfolio-gallery__haircut').removeClass("portfolio-gallery__hidden");
     })
+
 });
