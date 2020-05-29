@@ -9,6 +9,7 @@
 
     <link href="css/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" type="text/css" href="css/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" type="text/css"
           href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -64,7 +65,7 @@
 </nav>
 
 <!--features-->
-<section class="features">
+<section class="features" data-stellar-background-ratio="0.5">
     <div class="container">
         <div class="feature-background">
             <div class="feature-wrapper">
@@ -275,6 +276,57 @@
     </div>
 </section>
 
+<section class="contact">
+    <div class="contact-map">
+        <div class="contact-google-map" id="map"></div>
+    </div>
+</section>
+<footer class="contact-bg_wrapper">
+    <div class="contact-bg " data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-title"><h2>Вы можете связаться с нами:</h2></div>
+                <div class="contact-address">
+                    <ul>
+                        <li>
+                            <div class="contact-icon"><i class="lnr lnr-map-marker contact-icon__hover"></i></div>
+                            <div class="contact-des">Москва, Мичуринский проспект дом 16. Вход справа от
+                                супермаркета "Сити" со стороны улицы Столетова
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="lnr lnr-envelope contact-icon__hover"></i></div>
+                            <div class="contact-address__title">Email:</div>
+                            <div class="contact-des">vladshevela@gmail.com</div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="lnr lnr-phone contact-icon__hover"></i></div>
+                            <div class="contact-address__title">Телефон:</div>
+                            <div class="contact-des">+7(999)999-99-99</div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="lnr lnr-printer contact-icon__hover"></i></div>
+                            <div class="contact-address__title">Fax:</div>
+                            <div class="contact-des">+7(999)999-99-99</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="social-media">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook social-media-icon__hover" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-instagram social-media-icon__hover"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vk social-media-icon__hover" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright-des">Барбершоп "BristleOff" @2020 Все права защищены</div>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
 <!--<script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>-->
@@ -283,7 +335,12 @@
 <script src="js/fancybox/jquery.fancybox.min.js"></script>
 <script src="js/typed.js"></script>
 <script src="js/slick/slick.min.js" type="text/javascript"></script>
+<script src="js/stellar/jquery.stellar.min.js"></script>
 <script src="js/main.js" type="text/javascript"></script>
+
+<script>
+    $.stellar();
+</script>
 
 <script>
     let typed = new Typed('.typed-words', {
@@ -295,6 +352,72 @@
         loop: true,
         showCursor: true
     });
+</script>
+
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz5ZR_ovXLoaSSUb0PDB1fihvS2WK_LJM"></script>
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+        var mapOptions = {
+            zoom: 11,
+
+            center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+            styles: [{
+                "featureType": "administrative",
+                "elementType": "all",
+                "stylers": [{"saturation": "-100"}]
+            }, {
+                "featureType": "administrative.province",
+                "elementType": "all",
+                "stylers": [{"visibility": "off"}]
+            }, {
+                "featureType": "landscape",
+                "elementType": "all",
+                "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]
+            }, {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [{"saturation": -100}, {"lightness": "50"}, {"visibility": "simplified"}]
+            }, {
+                "featureType": "road",
+                "elementType": "all",
+                "stylers": [{"saturation": "-100"}]
+            }, {
+                "featureType": "road.highway",
+                "elementType": "all",
+                "stylers": [{"visibility": "simplified"}]
+            }, {
+                "featureType": "road.arterial",
+                "elementType": "all",
+                "stylers": [{"lightness": "30"}]
+            }, {
+                "featureType": "road.local",
+                "elementType": "all",
+                "stylers": [{"lightness": "40"}]
+            }, {
+                "featureType": "transit",
+                "elementType": "all",
+                "stylers": [{"saturation": -100}, {"visibility": "simplified"}]
+            }, {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]
+            }, {"featureType": "water", "elementType": "labels", "stylers": [{"lightness": -25}, {"saturation": -100}]}]
+        };
+
+        var mapElement = document.getElementById('map');
+
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(40.6700, -73.9400),
+            map: map,
+            title: 'Snazzy!'
+        });
+    }
 </script>
 
 </body>
