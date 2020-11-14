@@ -9,7 +9,6 @@ body {
     line-height: 28px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-
     -webkit-animation: fade-in 1s linear; /* Safari 4+ */
     -moz-animation: fade-in 1s linear; /* Fx 5+ */
     -o-animation: fade-in 1s linear; /* Opera 12+ */
@@ -105,6 +104,7 @@ a {
     font-size: 50px;
     font-weight: 300;
     line-height: 45px;
+    height: 100px;
 }
 
 .btn-header {
@@ -310,8 +310,6 @@ a {
 .features-header__title {
     font-size: 30px;
     font-weight: 400;
-    /*color: #0b0b0b;*/
-    /*margin-top: 10px;*/
     margin-bottom: 20px;
     text-transform: uppercase;
 }
@@ -375,7 +373,6 @@ a {
 }
 
 .price-title {
-    text-shadow: 1px 1px 2px black, 0 0 1em rgba(255, 115, 0, 0.7);
     display: flex;
     justify-content: center;
     padding: 50px 30px 20px 30px;
@@ -385,6 +382,7 @@ a {
 .price-title__name {
     font-size: 30px;
     font-weight: 400;
+    color: #0b0b0b;
 }
 
 .item-title__separator {
@@ -423,6 +421,7 @@ a {
 }
 
 .price-item__name {
+    font-weight: 300;
     color: #0b0b0b;
     margin-bottom: 15px;
     width: 260px;
@@ -622,7 +621,7 @@ a {
     background-color: rgba(195, 146, 88, 0.79);
     background-repeat: no-repeat;
 
-    height: 550px;
+    height: 100%;
     background-attachment: fixed;
 }
 
